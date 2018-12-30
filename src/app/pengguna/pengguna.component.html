@@ -1,0 +1,67 @@
+<form>
+  <div class="row">
+    <div class="col-4">
+      <div class="form-group">
+        <label for="">nama</label>
+        <input type="text" class="form-control" name="nama" [(ngModel)]="pengguna.nama">
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="form-group">
+        <label for="">telepon</label>
+        <input type="text" class="form-control" name="telepon" [(ngModel)]="pengguna.telepon">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <div class="form-group">
+        <label for="">email</label>
+        <input type="text" class="form-control" name="email" [(ngModel)]="pengguna.email">
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="form-group">
+        <label for="">username</label>
+        <input type="text" class="form-control" name="username" autocomplete="password" [(ngModel)]="pengguna.username">
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="form-group">
+        <label for="">pass</label>
+        <input type="password" class="form-control" name="password" [(ngModel)]="pengguna.password">
+      </div>
+    </div>
+    <div class="form-group">
+      <button (click)="simpan()" type="button" class="btn btn-success" style="float:left">simpan</button>
+    </div>
+  </div>
+</form>
+<div class="row">
+  <div class="col-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>nama</th>
+          <th>telepon</th>
+          <th>email</th>
+          <th>username</th>
+          <th>status</th>
+          <th>Opsi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of penggunas">
+          <td>{{item.nama}}</td>
+          <td>{{item.telepon}}</td>
+          <td>{{item.email}}</td>
+          <td>{{item.username}}</td>
+          <td>{{item.status?"Active":"Inactive"}}</td>
+          <td>
+            
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
